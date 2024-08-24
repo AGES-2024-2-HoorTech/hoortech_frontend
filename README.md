@@ -63,3 +63,6 @@ No diretório do projeto, você pode executar os seguintes comandos:
 npm start: Inicia o servidor de desenvolvimento.
 npm run build: Compila a aplicação para produção na pasta build.
 npm run eject: Remove a dependência de configuração do create-react-app.
+
+
+/////////
