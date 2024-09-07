@@ -1,17 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './styles/index.css'; // Atualizado
-import App from './components/App/App'; // Atualizado
+import ReactDOM from 'react-dom/client'; // Correção da importação
+import './styles/index.css'; // certo
+import App from './components/App/App.js'; // Atualizado
 import reportWebVitals from './utils/reportWebVitals'; // Atualizado
-import ReactDOM from 'react-dom';
-import './index.css';
-import VideoCapture from './components/VideoCapture';
+import VideoCapture from './components/VideoCapture/VideoCapture.js'; // Atualizado
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root')); // Método correto para criar o root
+root.render(
   <React.StrictMode>
-    <VideoCapture />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <VideoCapture />  {/* Ou <App /> dependendo do componente que quer renderizar */}
+  </React.StrictMode>
 );
 
 // Se você estiver utilizando o reportWebVitals, certifique-se de que ele está corretamente configurado.
