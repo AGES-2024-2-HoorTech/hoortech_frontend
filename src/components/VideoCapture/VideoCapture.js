@@ -8,6 +8,11 @@ function VideoCapture() {
     const ws = new WebSocket('ws://localhost:5000');
     setSocket(ws);
 
+    // Executado quando o WebSocket se conecta com sucesso
+    ws.onopen = () => {
+      console.log('Conexão WebSocket estabelecida');
+    };
+
     ws.onmessage = (event) => {
       const processedImage = event.data;
       const imgElement = document.getElementById('processed-image');
@@ -34,9 +39,14 @@ function VideoCapture() {
 
         // Tira fotos a cada 100ms e as envia pelo WebSocket
         let intervalId = setInterval(() => {
-          imageCapture.takePhoto()
-            .then(blob => blobToBase64(blob))
-            .then(data => ws.send(data));
+          // Verifica se o WebSocket está aberto antes de enviar dados
+          if (ws.readyState === WebSocket.OPEN) {
+            imageCapture.takePhoto()
+              .then(blob => blobToBase64(blob))
+              .then(data => ws.send(data));
+          } else {
+            console.log('WebSocket não está pronto para enviar dados');
+          }
         }, 100);
 
         // Limpa o intervalo e fecha o WebSocket quando o componente desmontar
