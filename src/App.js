@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
+import Header from './components/header/headerComponent';
 
 function VideoCapture() {
+
   const videoRef = useRef(null);
   const [socket, setSocket] = useState(null);
   const [isSocketOpen, setIsSocketOpen] = useState(false);  // Verificação de estado do WebSocket
@@ -63,6 +65,8 @@ function VideoCapture() {
       });
 
     return () => {
+      <Header/>
+
       ws.close();
     };
   }, [isSocketOpen]);
@@ -77,6 +81,7 @@ function VideoCapture() {
   };
 
   return (
+    
     <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'flex-start', height: '100vh', padding: '20px' }}>
       <div style={{
         position: 'relative',
@@ -88,6 +93,7 @@ function VideoCapture() {
         backgroundColor: '#f8f8f8',  // Coloca uma cor de fundo caso o vídeo não carregue
         marginRight: '20px'  // Adicione uma margem à direita para espaçamento
       }}>
+
         <video ref={videoRef} style={{ width: '100%', height: '100%', objectFit: 'cover' }} autoPlay></video>
         
         {/* Legenda sobre o vídeo */}
