@@ -1,6 +1,6 @@
 //import React from 'react';
 import React, { useState } from 'react';
-import '../../components/header/headerComponent.css';
+import './headerComponent.css';
 import { ReactComponent as LightModeIcon } from '../../assets/images/lightMode.svg'; // Ajuste o caminho conforme necessário
 import { ReactComponent as DarkModeIcon } from '../../assets/images/darkMode.svg'; // Ícone para o modo claro
 

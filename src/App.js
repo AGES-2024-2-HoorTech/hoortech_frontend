@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Header from './components/header/headerComponent';
+import Header from './pages/components/header/headerComponent';
 
 function VideoCapture() {
 
