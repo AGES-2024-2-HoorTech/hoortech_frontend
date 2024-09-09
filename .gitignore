@@ -1,23 +1,72 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+/node_modules/
 /.pnp
 .pnp.js
 
 # testing
 /coverage
+*.lcov
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env.*.local
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+lerna-debug.log*
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+
+# Parcel-bundler cache (used in some React projects)
+/.cache/
+
+# Storybook files (if you're using Storybook)
+/out/
+
+# Testing output
+/junit.xml
+/test-results/
+
+# Ignoring compiled Typescript files
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Ignore next.js build output
+.next/
+
+# Ignore Gatsby build output
+.public/
+
+# Ignore temporary files
+*.swp
+*.tmp
