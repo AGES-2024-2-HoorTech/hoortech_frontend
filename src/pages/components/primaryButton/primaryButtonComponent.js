@@ -1,16 +1,20 @@
 import React from 'react';
 import './primaryButtonComponent.css';
 
+const getThemeClass = (isDarkMode, baseClass) => {
+  return `${baseClass} ${isDarkMode ? 'dark' : 'light'}`;
+};
+
 const PrimaryButton = ({ text, imageSrc, onClick, isDarkMode }) => {
   return (
-    <div className={`button-container ${isDarkMode ? 'dark' : 'light'}`}>
+    <div className={getThemeClass(isDarkMode, 'button-container')}>
       <button
-        className={`primary-button ${isDarkMode ? 'dark' : 'light'}`}
+        className={getThemeClass(isDarkMode, 'primary-button')}
         onClick={onClick}
       >
         <img src={imageSrc} alt="icon" className="button-icon" />
       </button>
-      <p className={`button-text ${isDarkMode ? 'dark' : 'light'}`}>{text}</p>
+      <p className={getThemeClass(isDarkMode, 'button-text')}>{text}</p>
     </div>
   );
 };
