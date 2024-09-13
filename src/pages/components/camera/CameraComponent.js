@@ -5,7 +5,8 @@ import fullscreenIcon from "../../../assets/images/fullscreenIcon.svg";
 function CameraComponent() {
   return (
     <div>
-      <PrimaryButton  imageSrc={fullscreenIcon}></PrimaryButton>
+      <PrimaryButton text={"Tela cheia"} 
+      imageSrc={fullscreenIcon}></PrimaryButton>
       
     </div>
   );
