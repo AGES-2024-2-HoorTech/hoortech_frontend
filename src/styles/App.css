@@ -1,14 +1,171 @@
+/* Variáveis de cor para light e dark mode */
+:root {
+  --primary-light: #ffffff; /* Fundo branco */
+  --primary-dark: #1c1f24; /* Fundo escuro */
+  --text-light: #333333; /* Texto escuro para o light mode */
+  --text-dark: #ffffff; /* Texto claro para o dark mode */
+  --header-background-light: #f8f8f8;
+  --header-background-dark: #282c34;
+  --button-background-light: #dbdbdb;
+  --button-background-dark: #555;
+  --button-text-light: white;
+  --button-text-dark: white;
+  --border-light: #e6e6e6;
+  --border-dark: #444;
+}
+
+/* Light Mode */
+body.light {
+  background-color: var(--primary-light);
+  color: var(--text-light);
+}
+
+body.light .App-header {
+  background-color: var(--header-background-light);
+  color: var(--text-light);
+}
+
+body.light button {
+  background-color: var(--button-background-light);
+  color: var(--button-text-light);
+}
+
+body.light button:hover {
+  background-color: #bdc7d2;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: var(--primary-dark);
+  color: var(--text-dark);
+}
+
+body.dark .App-header {
+  background-color: var(--header-background-dark);
+  color: var(--text-dark);
+}
+
+body.dark button {
+  background-color: var(--button-background-dark);
+  color: var(--button-text-dark);
+}
+
+body.dark button:hover {
+  background-color: #666;
+}
+
 .App {
   text-align: center;
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+}
+
+body.light .header {
+  background-color: var(--header-background-light);
+  color: var(--text-light);
+}
+
+/* Estilo para o header no modo escuro */
+body.dark .header {
+  background-color: var(--header-background-dark);
+  color: var(--text-dark);
+  border-bottom: 2px solid var(--border-dark); /* Atualize a cor da borda para o modo escuro */
+}
+
+/* Estilo para o título no modo claro */
+body.light .header-title {
+  color: #035096; /* Azul no modo claro */
+}
+
+/* Estilo para o título no modo escuro */
+body.dark .header-title {
+  color: var(--text-dark); /* Texto claro no modo escuro */
+}
+
+button {
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Estilo para o container de vídeo */
+video {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+img#processed-image {
+  max-width: 300px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+/* Estilos para o histórico de traduções */
+.history-container {
+  background-color: var(--primary-light);
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  padding: 15px;
+  width: 300px;
+}
+
+body.dark .history-container {
+  background-color: var(--primary-dark);
+  border-color: var(--border-dark);
+}
+
+.history-title {
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+body.dark .history-title {
+  color: var(--text-dark);
+}
+
+.history-item {
+  margin-top: 10px;
+  padding: 10px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+body.dark .history-item {
+  border-bottom-color: var(--border-dark);
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.download-button {
+  background-color: var(--button-background-light);
+  color: var(--button-text-light);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+body.dark .download-button {
+  background-color: var(--button-background-dark);
+  color: var(--button-text-dark);
+}
+
+.download-button:hover {
+  opacity: 0.9;
 }
