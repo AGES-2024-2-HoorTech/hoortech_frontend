@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './VideoCapture.css';
+import displayLayout from '../displayLayout/displayLayoutComponent';
 
 function VideoCapture() {
   const videoRef = useRef(null);
@@ -87,7 +88,7 @@ function VideoCapture() {
           autoPlay
         ></video>
 
-        {/* Legenda sobre o vídeo */}
+        {displayLayout}
        
     </div>
   );
