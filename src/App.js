@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./pages/components/header/headerComponent";
 import "./styles/App.css"; // Importa os estilos
 import VideoCapture from "./pages/components/camera/VideoCapture";
 
 function App() {
   const [theme, setTheme] = useState("light"); // Gerenciamento do tema
-  const [caption, setCaption] = useState("teste de legenda aqui"); // Legenda do vídeo
+  const [caption] = useState("teste de legenda aqui"); // Legenda do vídeo
 
   // Carrega o tema salvo no localStorage
   useEffect(() => {
