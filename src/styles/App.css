@@ -56,6 +56,7 @@ body.dark button:hover {
 
 .App {
   text-align: center;
+  display: flex;
 }
 
 .App-header {
@@ -87,85 +88,4 @@ body.light .header-title {
 /* Estilo para o título no modo escuro */
 body.dark .header-title {
   color: var(--text-dark); /* Texto claro no modo escuro */
-}
-
-button {
-  font-size: 16px;
-  margin-top: 20px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
-/* Estilo para o container de vídeo */
-video {
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-}
-
-img#processed-image {
-  max-width: 300px;
-  margin-top: 20px;
-  border-radius: 5px;
-}
-
-/* Estilos para o histórico de traduções */
-.history-container {
-  background-color: var(--primary-light);
-  border: 1px solid var(--border-light);
-  border-radius: 10px;
-  padding: 15px;
-  width: 300px;
-}
-
-body.dark .history-container {
-  background-color: var(--primary-dark);
-  border-color: var(--border-dark);
-}
-
-.history-title {
-  font-size: 1.2rem;
-  color: var(--text-light);
-}
-
-body.dark .history-title {
-  color: var(--text-dark);
-}
-
-.history-item {
-  margin-top: 10px;
-  padding: 10px;
-  border-bottom: 1px solid var(--border-light);
-}
-
-body.dark .history-item {
-  border-bottom-color: var(--border-dark);
-}
-
-.history-item:last-child {
-  border-bottom: none;
-}
-
-.download-button {
-  background-color: var(--button-background-light);
-  color: var(--button-text-light);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-body.dark .download-button {
-  background-color: var(--button-background-dark);
-  color: var(--button-text-dark);
-}
-
-.download-button:hover {
-  opacity: 0.9;
 }
