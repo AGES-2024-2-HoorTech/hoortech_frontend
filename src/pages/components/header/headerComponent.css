@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 1%;
+  width: 95%;
+  justify-content: space-between;  /* Posiciona o título e o botão de troca de tema nos lados opostos */
+  border-bottom: 1px solid grey;
+  background-color: white;
+  box-sizing: border-box; /* Inclui padding e border no tamanho total */
+}
+
+.header-title {
+  font-size: 25px;  /* Ajusta o tamanho da fonte */
+  color: #035096;  /* Cor azul para o título */
+  font-weight: bold;
+}
+
+.icon-button {
+  background: none; 
+  border: none; 
+  cursor: pointer;
+  font-size: 2em;  /* Aumenta o tamanho do botão */
+  color: gray;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+

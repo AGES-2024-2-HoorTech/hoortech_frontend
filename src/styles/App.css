@@ -1,14 +1,182 @@
-.App {
+/* Variáveis de cor para light e dark mode */
+:root {
+  --primary-light: #ffffff; /* Fundo branco */
+  --primary-dark: #010810; /* Fundo escuro */
+  --text-light: #333333; /* Texto escuro para o light mode */
+  --text-dark: #ffffff; /* Texto claro para o dark mode */
+  --header-background-light: #f8f8f8;
+  --button-background-light: #dbdbdb;
+  --button-background-dark: #555;
+  --button-text-light: white;
+  --button-text-dark: white;
+  --border-light: #e6e6e6;
+  --border-dark: #969696;
+  --dropdown-background-dark: #233a50;
+}
+
+/* Light Mode */
+body.light {
+  background-color: var(--primary-light);
+  color: var(--text-light);
+}
+
+body.light .App-header {
+  background-color: var(--header-background-light);
+  color: var(--text-light);
+}
+
+body.light button {
+  color: var(--button-text-light);
+  fill: grey;
+}
+
+body.light button svg {
+  fill: grey;
+}
+
+body.light button:hover {
+  background-color: #bdc7d2;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: var(--primary-dark);
+  color: var(--text-dark);
+}
+
+body.dark .App-header {
+  color: var(--text-dark);
+}
+
+body.dark button {
+  color: var(--button-text-dark);
+  fill: whtie;
+}
+
+body.dark button:hover {
+  background-color: #666;
+}
+
+.app {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.container-app {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 75%;
+}
+
+.container-body {
+  height: 100%;
+  width: 100%;
+}
+
+.container-history {
+  width: 30%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+}
+
+.container-items {
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  padding: 0 2rem;
+  gap: 8rem;
+}
+
+.container-buttons{
+  display: flex;
+}
+
+/* Estilos Light/Dark*/
+
+body.light .header {
+  color: var(--text-light);
+}
+
+/* Estilo para o header no modo escuro */
+body.dark .header {
+  background-color: var(--primary-dark);
+  color: var(--text-dark);
+  border-bottom: 2px solid var(--border-dark); /* Atualize a cor da borda para o modo escuro */
+}
+
+/* Estilo para o título no modo claro */
+body.light .header-title {
+  color: #035096; /* Azul no modo claro */
+}
+
+/* Estilo para o título no modo escuro */
+body.dark .header-title {
+  color: var(--text-dark); /* Texto claro no modo escuro */
+}
+
+/* Estilo para o dropdown no modo escuro*/
+body.dark .css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+  /*dropdown box background*/
+  background-color: transparent;
+  color: var(--button-text-dark);
+  border:1px solid grey;
+}
+
+body.dark .css-kg5swy > span {
+  /*Texto "traduzir"*/
+  color: var(--button-text-dark);
+}
+
+body.dark #traduzirInput {
+  /*Placeholder traduzir*/
+  color: var(--text-dark);
+  background-color: var(--primary-dark);
+}
+
+body.dark .css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon {
+  /*Estilização icone seta svg*/
+  fill: var(--button-background-light);
+  border-color: var(--dropdown-background-dark);
+}
+
+
+/* Estilos para o modo Dark */
+body.dark .button-container  {
+  background-color: transparent;
+}
+
+body.dark .primary-button {
+  background-color: transparent;
+  border: 1px solid var(--text-dark);
+}
+
+body.dark button span{
+  color: var(--text-dark);
+}
+
+
+body.dark .primary-button:hover {
+  background-color: #83A5C3;
+}
+
+body.dark .button-text.dark {
+  color: #ffffff;
 }

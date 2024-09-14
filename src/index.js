@@ -1,13 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './styles/index.css'; // Atualizado
-import App from './components/App/App'; // Atualizado
+import ReactDOM from 'react-dom/client'; // Correção da importação
+import './styles/index.css'; // Certo
+import App from './App.js'; // Atualizado
 import reportWebVitals from './utils/reportWebVitals'; // Atualizado
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root')); // Método correto para criar o root
 root.render(
   <React.StrictMode>
-    <App />
+    <App /> {/* Renderizando o App que irá controlar toda a aplicação */}
   </React.StrictMode>
 );
 
