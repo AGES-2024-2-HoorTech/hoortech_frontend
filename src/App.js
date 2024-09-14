@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Header from "./pages/components/header/headerComponent";
 import "./styles/App.css"; // Importa os estilos
 import VideoCapture from "./pages/components/camera/VideoCapture";
+import displayLayout from "./pages/components/displayLayout/displayLayoutComponent"
 
 function App() {
   const [theme, setTheme] = useState("light"); // Gerenciamento do tema
@@ -28,7 +29,7 @@ function App() {
       <div className="container-app">
       <Header theme={theme} toggleTheme={toggleTheme} />
       <div className="container-body">
-      <VideoCapture caption={caption} />
+      <VideoCapture caption={ <displayLayout/>} />
       <div className="container-buttons">
         {/* buttons e dropdown aqui  */}
         <p>buttons and dropdown here</p>
