@@ -1,0 +1,23 @@
+.camera{
+    position: relative;
+    width: 70%;   
+    height: 75%;  
+    border-radius: 15px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #f8f8f8; 
+    margin-right: 20px; 
+     -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    padding: 20px; 
+}
