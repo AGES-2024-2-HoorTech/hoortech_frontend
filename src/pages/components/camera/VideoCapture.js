@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './VideoCapture.css';
 
-function VideoCapture({ caption }) {
+function VideoCapture() {
   const videoRef = useRef(null);
-  const [socket, setSocket] = useState(null);
+  const [setScoket, setSocket] = useState(null);
   const [isSocketOpen, setIsSocketOpen] = useState(false); 
   // Verificação de estado do WebSocket
 

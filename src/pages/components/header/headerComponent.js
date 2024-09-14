@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./headerComponent.css";
 import IconButton from "@mui/material/IconButton"; // Importa o componente de botão do Material UI
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined"; // Ícone de sol (modo claro)

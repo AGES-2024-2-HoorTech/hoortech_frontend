@@ -26,8 +26,12 @@ body.light .App-header {
 }
 
 body.light button {
-  background-color: var(--button-background-light);
   color: var(--button-text-light);
+  fill: grey;
+}
+
+body.light button svg{
+  fill: grey;
 }
 
 body.light button:hover {
@@ -41,13 +45,12 @@ body.dark {
 }
 
 body.dark .App-header {
-  background-color: var(--header-background-dark);
   color: var(--text-dark);
 }
 
 body.dark button {
-  background-color: var(--button-background-dark);
   color: var(--button-text-dark);
+  fill: whtie;
 }
 
 body.dark button:hover {
