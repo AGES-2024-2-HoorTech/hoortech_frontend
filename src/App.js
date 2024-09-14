@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Header from "./pages/components/header/headerComponent";
 import "./styles/App.css"; // Importa os estilos
 import VideoCapture from "./pages/components/camera/VideoCapture";
+import CameraComponent from "./pages/components/camera/CameraComponent";
 
 function App() {
   const [theme, setTheme] = useState("light"); // Gerenciamento do tema
@@ -29,6 +30,8 @@ function App() {
 
       {/* Componente VideoCapture */}
       <VideoCapture caption={caption} />
+
+      <CameraComponent />   
     </div>
   );
 }
