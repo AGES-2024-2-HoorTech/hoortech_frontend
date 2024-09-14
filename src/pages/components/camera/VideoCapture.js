@@ -80,8 +80,7 @@ function VideoCapture() {
   };
 
   return (
-    <div className='container'>
-      <div className='camera'>
+    <div className='container-video'>
         <video
           ref={videoRef}
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -90,13 +89,6 @@ function VideoCapture() {
 
         {/* Legenda sobre o vídeo */}
        
-      </div>
-
-      <img
-        id="processed-image"
-        alt="Processed"
-        style={{ maxWidth: "100%", marginTop: "20px" }}
-      />
     </div>
   );
 }

@@ -1,17 +1,17 @@
 /* Variáveis de cor para light e dark mode */
 :root {
   --primary-light: #ffffff; /* Fundo branco */
-  --primary-dark: #1c1f24; /* Fundo escuro */
+  --primary-dark: #1c1c1c; /* Fundo escuro */
   --text-light: #333333; /* Texto escuro para o light mode */
   --text-dark: #ffffff; /* Texto claro para o dark mode */
   --header-background-light: #f8f8f8;
-  --header-background-dark: #282c34;
+  --header-background-dark: #1c1c1c;
   --button-background-light: #dbdbdb;
   --button-background-dark: #555;
   --button-text-light: white;
   --button-text-dark: white;
   --border-light: #e6e6e6;
-  --border-dark: #444;
+  --border-dark: #969696;
 }
 
 /* Light Mode */
@@ -57,8 +57,34 @@ body.dark button:hover {
   background-color: #666;
 }
 
-.App {
+.app {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.container-app{
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 75%;
+}
+
+.container-body{
+  height: 100%;
+  width: 100%;
+}
+
+.container-history{
+  width: 30%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
   display: flex;
 }
 
