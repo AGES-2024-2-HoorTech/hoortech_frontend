@@ -1,11 +1,10 @@
 /* Variáveis de cor para light e dark mode */
 :root {
   --primary-light: #ffffff; /* Fundo branco */
-  --primary-dark: #1c1c1c; /* Fundo escuro */
+  --primary-dark: #101010; /* Fundo escuro */
   --text-light: #333333; /* Texto escuro para o light mode */
   --text-dark: #ffffff; /* Texto claro para o dark mode */
   --header-background-light: #f8f8f8;
-  --header-background-dark: #1c1c1c;
   --button-background-light: #dbdbdb;
   --button-background-dark: #555;
   --button-text-light: white;
@@ -98,13 +97,12 @@ body.dark button:hover {
 }
 
 body.light .header {
-  background-color: var(--header-background-light);
   color: var(--text-light);
 }
 
 /* Estilo para o header no modo escuro */
 body.dark .header {
-  background-color: var(--header-background-dark);
+  background-color: var(--primary-dark);
   color: var(--text-dark);
   border-bottom: 2px solid var(--border-dark); /* Atualize a cor da borda para o modo escuro */
 }

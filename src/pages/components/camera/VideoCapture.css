@@ -1,6 +1,5 @@
 video {
     border-radius: 15px; 
-    background-color: #f8f8f8; 
      -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
