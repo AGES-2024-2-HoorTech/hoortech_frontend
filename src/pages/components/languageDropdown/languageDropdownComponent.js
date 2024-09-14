@@ -14,9 +14,9 @@ export default function BasicSelect() {
   };
 
   return (
-    <Box sx={{ maxWidth: 240 }}>
-      <FormControl fullWidth>
-        <InputLabel id="traduzirInput">Traduzir</InputLabel>
+    <Box sx={{ minWidth: 240 }}>
+      <FormControl fullWidth className="dropdown">
+        <InputLabel id="traduzirInput">Escolha a tradução</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="traduzirSelect"
@@ -24,9 +24,8 @@ export default function BasicSelect() {
           label="traduzir"
           onChange={handleChange}
         >
-          <MenuItem value={"pt"}>Português</MenuItem>
-          <MenuItem value={"en"}>Inglês</MenuItem>
-          <MenuItem value={"na"}>Outro</MenuItem>
+          <MenuItem value={"lb"}>Libras</MenuItem>
+          <MenuItem value={"as"}>ASL</MenuItem>
         </Select>
       </FormControl>
     </Box>

@@ -30,10 +30,12 @@ function App() {
         <Header theme={theme} toggleTheme={toggleTheme} />
         <div className="container-body">
           <VideoCapture caption={caption} />
-          <div className="container-buttons">
+          <div className="container-items">
             {/* buttons e dropdown aqui  */}
             <BasicSelect />
-            <p>buttons and dropdown here</p>
+            <div className="container-buttons">
+              <p>buttons and dropdown here</p>
+            </div>
           </div>
         </div>
       </div>

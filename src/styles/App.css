@@ -97,9 +97,10 @@ body.dark button:hover {
   font-size: calc(10px + 2vmin);
 }
 
-.container-buttons {
-  /*Padding para alinhar o dropdown com a camera*/
-  padding-left: 1.25rem;
+.container-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /* Estilos Light/Dark*/
@@ -128,8 +129,9 @@ body.dark .header-title {
 /* Estilo para o dropdown no modo escuro*/
 body.dark .css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
   /*dropdown box background*/
-  background-color: var(--dropdown-background-dark);
+  background-color: transparent;
   color: var(--button-text-dark);
+  border:1px solid grey;
 }
 
 body.dark .css-kg5swy > span {
@@ -140,6 +142,7 @@ body.dark .css-kg5swy > span {
 body.dark #traduzirInput {
   /*Placeholder traduzir*/
   color: var(--text-dark);
+  background-color: var(--primary-dark);
 }
 
 body.dark .css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon {
@@ -147,3 +150,4 @@ body.dark .css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon {
   fill: var(--button-background-light);
   border-color: var(--dropdown-background-dark);
 }
+
