@@ -88,7 +88,7 @@ function VideoCapture() {
           autoPlay
         ></video>
 
-        {displayLayout}
+        {<displayLayout text = " testando "/>}
        
     </div>
   );
