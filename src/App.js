@@ -31,10 +31,10 @@ function App() {
         <div className="container-body">
           <VideoCapture caption={caption} />
           <div className="container-items">
-            {/* buttons e dropdown aqui  */}
+            {/* dropdown here  */}
             <BasicSelect />
             <div className="container-buttons">
-              <p>buttons and dropdown here</p>
+              <p>buttons here</p>
             </div>
           </div>
         </div>
