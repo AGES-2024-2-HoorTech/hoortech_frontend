@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Header from "./pages/components/header/headerComponent";
 import "./styles/App.css"; // Importa os estilos
+import TranslationHistory from "./pages/components/translationHistory/translationHistory.js";
 import VideoCapture from "./pages/components/camera/VideoCapture";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
 
       {/* Componente VideoCapture */}
       <VideoCapture caption={caption} />
+      <TranslationHistory />
     </div>
   );
 }

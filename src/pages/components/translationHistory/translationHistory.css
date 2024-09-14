@@ -1,0 +1,88 @@
+
+.history-container {
+  background-color: #f5f5f5; 
+  color: #2d2d2d; 
+  padding: 20px;
+  border-radius: 10px;
+  width: 25%; 
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  border: 1px solid #e0e0e0; 
+}
+
+
+.history-container h2 {
+  color: #2d4e8f; 
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
+.history-container hr {
+  border: 0;
+  border-top: 1px solid #dcdcdc;
+  margin: 10px 0;
+}
+
+
+.history-list {
+  max-height: 400px; 
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+
+.translation-item {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0; 
+}
+
+.time {
+  font-size: 14px;
+  color: #2d4e8f;
+  font-weight: bold;
+}
+
+.text-box {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  color: #4f4f4f; 
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+.download-button {
+  background-color: #d7dfec; 
+  color: #2d4e8f; 
+  padding: 12px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto; 
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.download-button:hover {
+  background-color: #c5cfdf; 
+}
+
+/* @media age como um if */
+@media (max-width: 40px) {
+  .history-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .download-button {
+    width: 100%;
+    padding: 10px;
+  }
+}
