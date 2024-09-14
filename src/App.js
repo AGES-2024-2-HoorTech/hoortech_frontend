@@ -25,10 +25,21 @@ function App() {
   return (
     <div className={`app ${theme}`}>
       {/* Passa o estado de tema e a função de alternar tema para o Header */}
+      <div className="container-app">
       <Header theme={theme} toggleTheme={toggleTheme} />
-
-      {/* Componente VideoCapture */}
+      <div className="container-body">
       <VideoCapture caption={caption} />
+      <div className="container-buttons">
+        {/* buttons e dropdown aqui  */}
+        <p>buttons and dropdown here</p>
+      </div>
+      </div>
+      </div>
+
+      <div className="container-history">
+        {/* historico vai aqui */}
+        <p>history here</p>
+      </div>
     </div>
   );
 }
