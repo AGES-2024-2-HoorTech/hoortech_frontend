@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import Header from "./pages/components/header/headerComponent";
 import "./styles/App.css"; // Importa os estilos
 import VideoCapture from "./pages/components/camera/VideoCapture";
-import displayLayout from "./pages/components/displayLayout/displayLayoutComponent"
-
+import PrimaryButton from "./pages/components/primaryButton/primaryButtonComponent"
 function App() {
   const [theme, setTheme] = useState("light"); // Gerenciamento do tema
-  const [caption] = useState("teste de legenda aqui"); // Legenda do vídeo
+  //const [caption] = useState("teste de legenda aqui"); // Legenda do vídeo
+  const [captionPosition, setCaptionPosition] = useState("bottom"); // Posição inicial da legenda
+
 
   // Carrega o tema salvo no localStorage
   useEffect(() => {
@@ -22,15 +23,24 @@ function App() {
     document.body.className = newTheme;
     localStorage.setItem("theme", newTheme); // Salva o tema no localStorage
   };
-
+  // Função para alternar a posição da legenda
+  const toggleCaptionPosition = () => {
+    setCaptionPosition((prevPosition) => {
+      if (prevPosition === "bottom") return "top";
+      if (prevPosition === "top") return "center";
+      return "bottom";
+    });
+  };
   return (
     <div className={`app ${theme}`}>
       {/* Passa o estado de tema e a função de alternar tema para o Header */}
       <div className="container-app">
       <Header theme={theme} toggleTheme={toggleTheme} />
       <div className="container-body">
-      <VideoCapture caption={ <displayLayout/>} />
+      <VideoCapture captionPosition={captionPosition} />
       <div className="container-buttons">
+      <PrimaryButton onClick={toggleCaptionPosition} text="Mudar Legenda" />
+
         {/* buttons e dropdown aqui  */}
         <p>buttons and dropdown here</p>
       </div>

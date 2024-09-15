@@ -1,20 +1,23 @@
-/* MovableCaption.css */
 .displayLayout {
-    position: absolute; /* Posiciona o texto sobre o vídeo */
-    bottom: 10%; /* Mantém a legenda próxima à parte inferior */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Compensa a centralização */
-    width: 80%; /* Ajusta a largura da legenda */
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para destacar o texto */
-    padding: 10px; /* Espaçamento ao redor do texto */
-    border-radius: 8px; /* Arredonda as bordas */
-    z-index: 10; /* Garante que o texto fique sobre o vídeo */
-  }
-  
-  .displayLayout-text {
-    color: #fff; /* Texto branco para maior contraste */
-    font-size: 1.5rem; /* Tamanho do texto ajustável */
-    font-weight: bold; /* Negrito para melhor visibilidade */
-  }
-  
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  z-index: 10; /* Garante que o texto fique sobre o vídeo */
+}
+
+.displayLayout.top {
+  top: 0;
+  left: 0;
+}
+
+.displayLayout.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.displayLayout-text {
+  color: #000; /* Customize a cor do texto aqui */
+  font-size: 1.5rem; /* Ajuste o tamanho do texto conforme necessário */
+}
