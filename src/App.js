@@ -3,6 +3,7 @@ import Header from "./pages/components/header/headerComponent";
 import "./styles/App.css"; // Importa os estilos
 import VideoCapture from "./pages/components/camera/VideoCapture";
 import BasicSelect from "./pages/components/languageDropdown/languageDropdownComponent";
+import PrimaryButton from "./pages/components/primaryButton/primaryButtonComponent";
 
 function App() {
   const [theme, setTheme] = useState("light"); // Gerenciamento do tema
@@ -45,8 +46,10 @@ function App() {
 
         <Header theme={theme} toggleTheme={toggleTheme} />
         <div className="container-body">
-          <VideoCapture caption={caption} />
+          <VideoCapture captionPosition={captionPosition} />
           <div className="container-items">
+          <PrimaryButton onClick={toggleCaptionPosition} text="Mudar Legenda" />
+
             {/* dropdown here  */}
             <BasicSelect />
             <div className="container-buttons">
