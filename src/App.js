@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import Header from "./pages/components/header/headerComponent";
 import "./styles/App.css"; // Importa os estilos
 import VideoCapture from "./pages/components/camera/VideoCapture";
-import PrimaryButton from "./pages/components/primaryButton/primaryButtonComponent"
+import BasicSelect from "./pages/components/languageDropdown/languageDropdownComponent";
+
 function App() {
   const [theme, setTheme] = useState("light"); // Gerenciamento do tema
   //const [caption] = useState("teste de legenda aqui"); // Legenda do vídeo
@@ -40,16 +41,19 @@ function App() {
     <div className={`app ${theme}`}>
       {/* Passa o estado de tema e a função de alternar tema para o Header */}
       <div className="container-app">
-      <Header theme={theme} toggleTheme={toggleTheme} />
-      <div className="container-body">
-      <VideoCapture captionPosition={captionPosition} />
-      <div className="container-buttons">
-      <PrimaryButton onClick={toggleCaptionPosition} text="Mudar Legenda" />
 
-        {/* buttons e dropdown aqui  */}
-        <p>buttons and dropdown here</p>
-      </div>
-      </div>
+
+        <Header theme={theme} toggleTheme={toggleTheme} />
+        <div className="container-body">
+          <VideoCapture caption={caption} />
+          <div className="container-items">
+            {/* dropdown here  */}
+            <BasicSelect />
+            <div className="container-buttons">
+              <p>buttons here</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="container-history">

@@ -1,0 +1,13 @@
+.css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select{
+    text-align: left;
+}
+
+.css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select:focus-within{
+    outline: none;
+}
+  
+
+#traduzirInput{
+    background-color: white;
+    padding-right: 5px;
+}

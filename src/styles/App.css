@@ -11,6 +11,7 @@
   --button-text-dark: white;
   --border-light: #e6e6e6;
   --border-dark: #969696;
+  --dropdown-background-dark: #233a50;
 }
 
 /* Light Mode */
@@ -29,7 +30,7 @@ body.light button {
   fill: grey;
 }
 
-body.light button svg{
+body.light button svg {
   fill: grey;
 }
 
@@ -65,7 +66,7 @@ body.dark button:hover {
   height: 100vh;
 }
 
-.container-app{
+.container-app {
   justify-content: space-between;
   display: flex;
   flex-direction: column;
@@ -74,12 +75,12 @@ body.dark button:hover {
   width: 75%;
 }
 
-.container-body{
+.container-body {
   height: 100%;
   width: 100%;
 }
 
-.container-history{
+.container-history {
   width: 30%;
   height: 100%;
   align-items: center;
@@ -95,6 +96,14 @@ body.dark button:hover {
   justify-content: center;
   font-size: calc(10px + 2vmin);
 }
+
+.container-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Estilos Light/Dark*/
 
 body.light .header {
   color: var(--text-light);
@@ -116,3 +125,29 @@ body.light .header-title {
 body.dark .header-title {
   color: var(--text-dark); /* Texto claro no modo escuro */
 }
+
+/* Estilo para o dropdown no modo escuro*/
+body.dark .css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root {
+  /*dropdown box background*/
+  background-color: transparent;
+  color: var(--button-text-dark);
+  border:1px solid grey;
+}
+
+body.dark .css-kg5swy > span {
+  /*Texto "traduzir"*/
+  color: var(--button-text-dark);
+}
+
+body.dark #traduzirInput {
+  /*Placeholder traduzir*/
+  color: var(--text-dark);
+  background-color: var(--primary-dark);
+}
+
+body.dark .css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon {
+  /*Estilização icone seta svg*/
+  fill: var(--button-background-light);
+  border-color: var(--dropdown-background-dark);
+}
+
