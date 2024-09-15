@@ -26,9 +26,14 @@ function App() {
   // Função para alternar a posição da legenda
   const toggleCaptionPosition = () => {
     setCaptionPosition((prevPosition) => {
-      if (prevPosition === "bottom") return "top";
-      if (prevPosition === "top") return "center";
-      return "bottom";
+      switch (prevPosition) {
+        case "top":
+          return "center";
+        case "center":
+          return "bottom";
+        default:
+          return "top";
+      }
     });
   };
   return (

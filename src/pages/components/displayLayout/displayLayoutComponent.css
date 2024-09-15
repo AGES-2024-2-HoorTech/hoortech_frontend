@@ -1,23 +1,38 @@
 .displayLayout {
   position: absolute;
-  width: 100%;
+  width: 80%; /* Define uma largura fixa ou percentual menor */
   text-align: center;
   overflow: hidden;
   z-index: 10; /* Garante que o texto fique sobre o vídeo */
+  box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+
 }
 
 .displayLayout.top {
-  top: 0;
-  left: 0;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  padding: 10px 20px; /* Adiciona padding dentro da legenda */
 }
 
 .displayLayout.center {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 10px 20px; /* Adiciona padding dentro da legenda */
+}
+
+.displayLayout.bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  padding: 10px 20px; /* Adiciona padding dentro da legenda */
 }
 
 .displayLayout-text {
-  color: #000; /* Customize a cor do texto aqui */
+  color: #fff; /* Cor do texto, geralmente branco para contraste */
   font-size: 1.5rem; /* Ajuste o tamanho do texto conforme necessário */
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo escuro semi-transparente para melhorar a legibilidade */
+  border-radius: 0.8rem; /* Bordas arredondadas para um visual mais agradável */
+  padding: 0.5rem; /* Espaçamento interno para o texto não ficar colado nas bordas */
 }
