@@ -51,7 +51,7 @@ function App() {
             <div className="container-buttons">
               <PrimaryButton text='Tela cheia' icon='fullscreen'/>
               <PrimaryButton text='Desativar camêra' icon='videocam'/>
-              <PrimaryButton text='Posição da legenda' icon='remove'/>
+              <PrimaryButton text='Posição da legenda' icon='remove' onClick={toggleCaptionPosition}/>
               <PrimaryButton text='Configurações da legenda' icon='text_fields'/>
             </div>
           </div>
