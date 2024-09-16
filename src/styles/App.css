@@ -1,7 +1,7 @@
 /* Variáveis de cor para light e dark mode */
 :root {
   --primary-light: #ffffff; /* Fundo branco */
-  --primary-dark: #101010; /* Fundo escuro */
+  --primary-dark: #010810; /* Fundo escuro */
   --text-light: #333333; /* Texto escuro para o light mode */
   --text-dark: #ffffff; /* Texto claro para o dark mode */
   --header-background-light: #f8f8f8;
@@ -99,8 +99,14 @@ body.dark button:hover {
 
 .container-items {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: start;
+  padding: 0 2rem;
+  gap: 8rem;
+}
+
+.container-buttons{
+  display: flex;
 }
 
 /* Estilos Light/Dark*/
@@ -151,3 +157,26 @@ body.dark .css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon {
   border-color: var(--dropdown-background-dark);
 }
 
+
+/* Estilos para o modo Dark */
+body.dark .button-container  {
+  background-color: transparent;
+}
+
+body.dark .primary-button {
+  background-color: transparent;
+  border: 1px solid var(--text-dark);
+}
+
+body.dark button span{
+  color: var(--text-dark);
+}
+
+
+body.dark .primary-button:hover {
+  background-color: #83A5C3;
+}
+
+body.dark .button-text.dark {
+  color: #ffffff;
+}
