@@ -1,20 +1,18 @@
 import React from 'react';
+import Icon from '@mui/material/Icon';
 import './primaryButtonComponent.css';
 
-const getThemeClass = (isDarkMode, baseClass) => {
-  return `${baseClass} ${isDarkMode ? 'dark' : 'light'}`;
-};
 
-const PrimaryButton = ({ text, imageSrc, onClick, isDarkMode }) => {
+const PrimaryButton = ({ text, icon, onClick }) => {
   return (
-    <div className={getThemeClass(isDarkMode, 'button-container')}>
+    <div className='button-container'>
       <button
-        className={getThemeClass(isDarkMode, 'primary-button')}
+        className='primary-button'
         onClick={onClick}
       >
-        <img src={imageSrc} alt="icon" className="button-icon" />
+        <span class="material-symbols-outlined">{icon}</span>
       </button>
-      <p className={getThemeClass(isDarkMode, 'button-text')}>{text}</p>
+      <p className='button-text'>{text}</p>
     </div>
   );
 };
