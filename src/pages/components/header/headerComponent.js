@@ -1,8 +1,8 @@
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined"; // Ícone de lua (modo escuro)
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined"; // Ícone de sol (modo claro)
+import IconButton from "@mui/material/IconButton"; // Importa o componente de botão do Material UI
 import React from "react";
 import "./headerComponent.css";
-import IconButton from "@mui/material/IconButton"; // Importa o componente de botão do Material UI
-import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined"; // Ícone de sol (modo claro)
-import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined"; // Ícone de lua (modo escuro)
 
 function Header({ toggleTheme, theme }) {
   return (
