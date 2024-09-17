@@ -1,48 +1,59 @@
+/* Estilos para o modo Light */
 .button-container {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
-    min-width: 100px;
-}
-
-button span{
-    fill: grey;
-    color: grey;
-    font-size: 32px;
-}
-
-button .material-symbols-outlined{
-    font-size: 28px;
+    margin: 10px;
 }
 
 .primary-button {
-    background-color: transparent;
-    border: 1px solid grey;
+    background-color: #ffffff;
+    border: 1px solid #4f4f4f;
     border-radius: 12px;
-    width: 72px;
-    height: 72px;
+    width: 64px;
+    height: 64px;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     cursor: pointer;
+    padding: 0;
 }
 
-button:hover {
+.primary-button.light:hover {
     background-color: #83A5C3;
-    border: none;
-}
-
-button:hover span{
-    color: white;
 }
 
 .button-icon {
     max-width: 100%;
     max-height: 100%;
+    object-fit: contain;
 }
 
 .button-text {
+    margin-top: 8px;
+    color: #000000;
     font-size: 14px;
     text-align: center;
     max-width: 100px;
+    word-break: break-word;
+    white-space: normal;
+}
+
+/* Estilos para o modo Dark */
+.button-container.dark {
+    background-color: #1d1d1d;
+}
+
+.primary-button.dark {
+    background-color: #1d1d1d;
+    border: 1px solid #ffffff;
+}
+
+.primary-button.dark:hover {
+    background-color: #83A5C3;
+}
+
+.button-text.dark {
+    color: #ffffff;
 }
