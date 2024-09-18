@@ -3,10 +3,12 @@ import Header from "./pages/components/header/headerComponent";
 import "./styles/App.css"; // Importa os estilos
 import VideoCapture from "./pages/components/camera/VideoCapture";
 import CameraComponent from "./pages/components/camera/CameraComponent";
+import { Fullscreen } from "@mui/icons-material";
 
 function App() {
   const [theme, setTheme] = useState("light"); // Gerenciamento do tema
   const [caption, setCaption] = useState("teste de legenda aqui"); // Legenda do vídeo
+  const fullscreenRef = useRef(null);
 
   // Carrega o tema salvo no localStorage
   useEffect(() => {
@@ -29,9 +31,8 @@ function App() {
       <Header theme={theme} toggleTheme={toggleTheme} />
 
       {/* Componente VideoCapture */}
-      <VideoCapture caption={caption} />
-
-      <CameraComponent />   
+      <VideoCapture caption={caption} fullscreenRef={fullscreenRef} />
+      <CameraComponent fullscreenRef={fullscreenRef}/>   
     </div>
   );
 }

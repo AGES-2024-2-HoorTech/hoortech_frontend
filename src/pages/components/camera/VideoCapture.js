@@ -1,10 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './VideoCapture.css';
+import React, { useEffect, useRef, useState } from "react";
+import "./VideoCapture.css";
+import { Fullscreen } from "@mui/icons-material";
 
-function VideoCapture({ caption }) {
+function VideoCapture({ caption, fullscreenRef }) {
   const videoRef = useRef(null);
   const [socket, setSocket] = useState(null);
-  const [isSocketOpen, setIsSocketOpen] = useState(false); 
+  const [isSocketOpen, setIsSocketOpen] = useState(false);
   // Verificação de estado do WebSocket
 
   useEffect(() => {
@@ -80,8 +81,8 @@ function VideoCapture({ caption }) {
   };
 
   return (
-    <div className='container'>
-      <div className='camera'>
+    <div className="container">
+      <div className="camera" ref={fullscreenRef}>
         <video
           ref={videoRef}
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -89,7 +90,6 @@ function VideoCapture({ caption }) {
         ></video>
 
         {/* Legenda sobre o vídeo */}
-       
       </div>
 
       <img
