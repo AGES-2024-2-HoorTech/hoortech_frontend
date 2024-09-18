@@ -78,3 +78,5 @@ npm start: Inicia o servidor de desenvolvimento.
 npm run build: Compila a aplicação para produção na pasta build.
 npm run eject: Remove a dependência de configuração do create-react-app.
 npm install @mui/icons-material @mui/material @emotion/styled @emotion/react: instala Material Icons.
+npm install jspdf instalará o jspdf
+

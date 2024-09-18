@@ -1,37 +1,23 @@
+// src/pages/components/translationHistory/translationHistory.js
 import React, { useState } from "react";
 import "./translationHistory.css";
-import jsPDF from "jspdf";
+import { PDFGenerator } from "./pdfGenerator"; 
 
 const TranslationHistory = () => {
   const [translations, setTranslations] = useState([
     { time: "15:04", text: "Lorem ipsum dolor sit amet. Ea dicta minima..." },
     { time: "15:08", text: "Lorem ipsum dolor sit amet. Ea dicta minima..." },
-    { time: "15:08", text: "Lorem ipsum dolor sit amet. Ea dicta minima..." },
-    { time: "15:08", text: "Lorem ipsum dolor sit amet. Ea dicta minima..." },
-    { time: "15:08", text: "Lorem ipsum dolor sit amet. Ea dicta minima..." },
-    { time: "15:08", text: "Lorem ipsum dolor sit amet. Ea dicta minima..." },
-    { time: "15:08", text: "Lorem ipsum dolor sit amet. Ea dicta minima..." },
-    { time: "15:08", text: "Lorem ipsum dolor sit amet. Ea dicta minima..." },
-    { time: "15:08", text: "Lorem ipsum dolor sit amet. Ea dicta minima..." },
     
   ]);
 
   const downloadHistory = () => {
-    const doc = new jsPDF();
-    doc.text("Histórico de traduções", 10, 10);
-    translations.forEach((translation, index) => {
-      doc.text(
-        `${translation.time} - ${translation.text}`,
-        10,
-        20 + index * 10
-      );
-    });
-    doc.save("translation-history.pdf");
+    const pdfGenerator = new PDFGenerator(translations);
+    pdfGenerator.generatePDF();
   };
 
   return (
     <div className="history-container">
-      <h2>Histórico de traduções</h2>
+      <h2 className="history-title">Histórico de Traduções</h2>
       <div className="history-list">
         {translations.map((translation, index) => (
           <div key={index} className="translation-item">

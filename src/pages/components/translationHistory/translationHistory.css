@@ -1,88 +1,154 @@
-
-.history-container {
-  background-color: #f5f5f5; 
-  color: #2d2d2d; 
+/* Modo Claro */
+body.light .history-container {
+  background-color: #DCDCDC; /* Cor de fundo clara */
+  color: #2d2d2d; /* Cor do texto escura */
+  border: 1px solid #e0e0e0; /* Borda clara */
   padding: 20px;
   border-radius: 10px;
-  width: 25%; 
+  width: 25%;
   height: 100%;
-  font-family: 'Arial', sans-serif;
-  border: 1px solid #e0e0e0; 
+  font-family: 'Poppins', sans-serif;
+  position: fixed; /* Fixar no topo */
+  top: 20px; /* Distância do topo */
+  right: 20px; /* Distância da direita */
+  margin: 50px 0;
 }
 
-
-.history-container h2 {
-  color: #2d4e8f; 
+body.light .history-container h2 {
+  color: #2d4e8f; /* Cor do título no modo claro */
   font-size: 18px;
   margin-bottom: 10px;
   text-align: center;
+  border-bottom: 2px solid #ffffff; /* Linha abaixo do título */
+  padding-bottom: 10px; /* Espaçamento entre o texto e a linha */
 }
 
-
-.history-container hr {
+body.light .history-container hr {
   border: 0;
   border-top: 1px solid #dcdcdc;
-  margin: 10px 0;
 }
 
-
-.history-list {
+body.light .history-list {
   max-height: 400px; 
   overflow-y: auto;
   margin-bottom: 20px;
 }
 
-
-.translation-item {
+body.light .translation-item {
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #e0e0e0; 
+  border-bottom: 2px solid #ffffff; /* Espessura da linha aumentada para 2px */
 }
 
-.time {
+body.light .time {
   font-size: 14px;
-  color: #2d4e8f;
   font-weight: bold;
 }
 
-.text-box {
-  background-color: #ffffff;
+body.light .text-box {
   padding: 15px;
   border-radius: 8px;
   margin-top: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  color: #4f4f4f; 
   font-size: 14px;
   line-height: 1.5;
+  background-color: #ffffff; /* Cor de fundo do texto */
+  color: #3b3a3a; /* Cor do texto */
 }
 
-
-.download-button {
-  background-color: #d7dfec; 
-  color: #2d4e8f; 
+body.light .download-button {
+  background-color: #83A5C3; /* Cor de fundo do botão */
+  color: #035096; /* Cor do texto do botão */
+  border: 6px solid #ffffff; /* Borda preta no modo claro */
+  border-radius: 20px;
   padding: 12px 20px;
-  border: none;
-  border-radius: 30px;
+  width: 400px;
+  height: 50px;
   cursor: pointer;
   display: block;
-  margin: 0 auto; 
+  margin: 0 auto;
   font-size: 16px;
   font-weight: bold;
 }
 
-.download-button:hover {
-  background-color: #c5cfdf; 
+body.light .download-button:hover {
+  background-color: #004080; /* Cor de fundo do botão ao passar o mouse */
+  color: #ffffff; /* Cor do texto ao passar o mouse */
 }
 
-/* @media age como um if */
-@media (max-width: 40px) {
-  .history-container {
-    width: 100%;
-    padding: 15px;
-  }
+/* Modo Escuro */
+body.dark .history-container {
+  background-color: #464545; /* Cor de fundo escura */
+  color: #e0e0e0; /* Cor do texto clara */
+  border: 1px solid #333333; /* Borda escura */
+  padding: 20px;
+  border-radius: 10px;
+  width: 25%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  position: fixed; /* Fixar no topo */
+  top: 20px; /* Distância do topo */
+  right: 20px; /* Distância da direita */
+  margin: 50px 0;
+}
 
-  .download-button {
-    width: 100%;
-    padding: 10px;
-  }
+body.dark .history-container h2 {
+  color: #ffffff; /* Cor do título no modo escuro */
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-bottom: 2px solid #333333; /* Linha abaixo do título */
+  padding-bottom: 10px; /* Espaçamento entre o texto e a linha */
+}
+
+body.dark .history-container hr {
+  border: 0;
+  border-top: 1px solid #333333;
+}
+
+body.dark .history-list {
+  max-height: 400px; 
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+body.dark .translation-item {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333333; 
+}
+
+body.dark .time {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+body.dark .text-box {
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #2c2c2c; /* Cor de fundo do texto escura */
+  color: #e0e0e0; /* Cor do texto */
+}
+
+body.dark .download-button {
+  background-color: #83A5C3; /* Cor de fundo do botão */
+  color: #ffffff; /* Cor do texto do botão */
+  border: 6px solid #000000; /* Borda preta no modo escuro */
+  border-radius: 20px;
+  padding: 12px 20px;
+  width: 400px;
+  height: 50px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+body.dark .download-button:hover {
+  background-color: #333333; /* Cor de fundo do botão ao passar o mouse */
 }
