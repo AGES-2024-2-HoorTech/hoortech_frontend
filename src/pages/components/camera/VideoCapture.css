@@ -1,22 +1,25 @@
-.camera{
-    position: relative;
-    width: 70%;   
-    height: 75%;  
-    border-radius: 15px; 
-    overflow: hidden; 
-    background-color: #f8f8f8; 
-    margin-right: 20px; 
-     -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+video {
+  border-radius: 15px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.container-video{
+    position: relative; /* Garante que a legenda seja posicionada corretamente sobre o vídeo */
+    padding: 20px;  
+    width: 95%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.container{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: 100vh;
-    padding: 20px; 
+.container-video {
+  padding: 1.25rem;
+  width: 95%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
