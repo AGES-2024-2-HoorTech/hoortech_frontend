@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './VideoCapture.css';
+import DisplayLayout from '../displayLayout/displayLayoutComponent';
 
-function VideoCapture() {
+function VideoCapture({ captionPosition }) {
   const videoRef = useRef(null);
   const [setScoket, setSocket] = useState(null);
   const [isSocketOpen, setIsSocketOpen] = useState(false); 
@@ -86,9 +87,7 @@ function VideoCapture() {
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
           autoPlay
         ></video>
-
-        {/* Legenda sobre o vídeo */}
-       
+          <DisplayLayout text="Testando legenda animada da lu" position={captionPosition} />
     </div>
   );
 }

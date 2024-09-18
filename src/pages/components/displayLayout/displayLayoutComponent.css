@@ -1,0 +1,44 @@
+.displayLayout {
+    position: absolute;
+    width: 80%; /* Define uma largura fixa ou percentual menor */
+    text-align: center;
+    overflow: hidden;
+    z-index: 10;
+    box-sizing: border-box; 
+  
+  }
+  
+   /* Estiliza quando esta encima */
+  .displayLayout.top {
+    top: 10%; /*Aqui ajusta a posicao na parte de cima*/ 
+    left: 50%;
+    transform: translateX(-50%); 
+    padding: 10px 20px; 
+  }
+  
+   /* Estiliza quando esta no meio */
+  .displayLayout.center {
+    top: 50%;/*Aqui ajusta a posicao na parte do meio*/ 
+    left: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px; 
+  }
+  
+   /* Estiliza quando esta embaixo */
+  .displayLayout.bottom {
+    bottom: 5%;/*Aqui ajusta a posicao na parte de baixo*/ 
+    left: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px; /* Adiciona padding dentro da legenda */
+  }
+  
+  /*Responsavel por estilizar a parte textual interna do componente*/
+  .displayLayout-text {
+    color: #fff; 
+    font-size: 1.5rem; 
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0.8rem; 
+    padding: 0.5rem; 
+  }
